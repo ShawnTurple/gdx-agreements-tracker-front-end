@@ -1,10 +1,9 @@
 # build env.
 FROM node:14-alpine3.12 as build
 WORKDIR /app
-COPY public/ public/
-COPY src/ src/
-COPY package.json .
-RUN ls -la /app
+COPY ./../../../public/ public/
+COPY ./../../../src/ src/
+COPY ./../../../package.json .
 
 RUN yarn
 RUN yarn build
