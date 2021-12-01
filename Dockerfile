@@ -12,5 +12,5 @@ RUN yarn build
 FROM nginx:1.21-alpine
 COPY --from=build /app/build /var/www
 COPY Docker/nginx.conf /etc/nginx/nginx.conf
-EXPOSE 80
+EXPOSE 8080
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
