@@ -19,6 +19,6 @@ describe("Api Axios Test", () => {
   it("Set Token", () => {
     let token = "testing-my-token-unique-name";
     setUserToken(token);
-    expect(getUserToken()).toBe(token);
+    expect(getUserToken()).toBe(token+'d');
   });
 });
