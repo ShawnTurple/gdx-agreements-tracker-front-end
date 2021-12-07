@@ -1,12 +1,13 @@
 name: Test React Application
-
-
 on:
   pull_request:
     branches: [ development ]
   workflow_dispatch:
+defaults:
+  run:
+    working-directory: ./
 jobs:
-  test_app:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
